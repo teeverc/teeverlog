@@ -1,0 +1,33 @@
+singleQuote: true
+jsxSingleQuote: true
+singleAttributePerLine: false
+bracketSpacing: true
+bracketSameLine: false
+trailingComma: 'none'
+tabWidth: 2
+printWidth: 100
+arrowParens: 'always'
+semi: false
+importOrder:
+  [
+    '^(react/(.*)$)|^(react$)',
+    '^(next/(.*)$)|^(next$)',
+    '<THIRD_PARTY_MODULES>',
+    '',
+    '^types$',
+    '^@local/(.*)$',
+    '^@/config/(.*)$',
+    '^@/lib/(.*)$',
+    '^@/components/(.*)$',
+    '^@/styles/(.*)$',
+    '^@/(.*)$',
+    '^[./]',
+  ]
+importOrderBuiltinModulesToTop: true
+importOrderCaseInsensitive: true
+importOrderParserPlugins: [typescript, jsx, decorators-legacy]
+importOrderMergeDuplicateImports: true
+importOrderCombineTypeAndValueImports: true
+importOrderSeparation: false
+plugins: ['@ianvs/prettier-plugin-sort-imports']
+pluginSearchDirs: false

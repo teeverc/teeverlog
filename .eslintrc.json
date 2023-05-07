@@ -1,0 +1,20 @@
+{
+  "globals": {
+    "NodeJS": true,
+    "React": true,
+    "JSX": true
+  },
+  "rules": {
+    "prefer-const": "warn",
+    "no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "react-hooks/exhaustive-deps": "off",
+    "no-multiple-empty-lines": "warn",
+    "no-undef": "warn",
+    "no-var": "warn"
+  }
+}
