@@ -1,6 +1,6 @@
 {
   "name": "teeverlog",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "replacement for console logging",
   "main": "dist/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
      "url": "https://github.com/teeverc/teeverlog.git"
    },
   "files": [
-    "dist/index.js",
+    "dist",
     "README.md"
   ],
   "devDependencies": {
