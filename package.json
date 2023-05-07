@@ -1,6 +1,6 @@
 {
   "name": "teeverlog",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "replacement for console logging",
   "main": "dist/index.js",
   "scripts": {

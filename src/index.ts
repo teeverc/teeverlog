@@ -6,9 +6,6 @@ const consoleWarn = console.warn
 const consoleError = console.error
 const consoleDebug = console.debug
 
-/**
- *  [Apr 8, 12:04:29.589 AM] [LOG]: hello world!
- */
 const log = (
   logLevel: 'log' | 'info' | 'warn' | 'error' | 'debug',
   chalkFunc: chalk.Chalk,
