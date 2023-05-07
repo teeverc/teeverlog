@@ -1,8 +1,8 @@
 {
-  "name": "ts-base",
-  "version": "1.0.0",
-  "description": "starter template for typescript project",
-  "main": "src/index.ts",
+  "name": "teeverlog",
+  "version": "1.0.5",
+  "description": "replacement for console logging",
+  "main": "dist/index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
     "test": "ts-node src/test.ts",
@@ -17,8 +17,15 @@
   "dependencies": {
     "chalk": "^4.1.2"
   },
+  "repository": {
+     "type": "git",
+     "url": "https://github.com/teeverc/teeverlog.git"
+   },
+  "files": [
+    "dist/index.js",
+    "README.md"
+  ],
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
-    "@types/node": "^18.15.11"
+    "@types/node": "^20.1.0"
   }
 }
