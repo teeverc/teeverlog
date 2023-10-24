@@ -15,6 +15,12 @@ Logging module.
 
 ```console
 npm install teeverlog
+
+pnpm install teeverlog
+
+bun install teeverlog
+
+yarn add teeverlog
 ```
 
 ### Initializing
