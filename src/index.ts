@@ -23,7 +23,7 @@ const log = (
       return chalkFunc(JSON.stringify(arg, null, 2))
     }
 
-    return chalkFunc(arg)
+    return chalkFunc(`${arg}`)
   })
 
   args.unshift(
