@@ -6,26 +6,45 @@ const consoleWarn = console.warn
 const consoleError = console.error
 const consoleDebug = console.debug
 
+
+/**
+ * This function logs messages with different log levels and colorizes them using chalk.
+ *
+ * @param {string} logLevel - The level of the log. It can be 'log', 'info', 'warn', 'error', or 'debug'.
+ * @param {function} chalkFunc - The chalk function to use for colorizing the log message.
+ * @param {...any} args - The messages to be logged. These can be of any type.
+ *
+ * @returns {void}
+ */
 const log = (
   logLevel: 'log' | 'info' | 'warn' | 'error' | 'debug',
   chalkFunc: chalk.Chalk,
   ...args: any[]
 ) => {
+  // Prepend the log level to the arguments
   args.unshift(`[${logLevel.toUpperCase()}]:`)
 
+  // Map through each argument
   args = args.map((arg) => {
+    // If the argument is an instance of Error, return the stack trace or the message, colorized
     if (arg instanceof Error) {
       return chalkFunc(arg.stack || arg.message)
     }
 
+    // If the argument is an object, return the stringified version of the object, colorized
     if (typeof arg === 'object') {
-      // return arg
       return chalkFunc(JSON.stringify(arg, null, 2))
     }
 
-    return chalkFunc(`${arg}`)
+    // For other types, convert the argument to a string and return the colorized version
+    if (typeof arg === 'string') {
+      return chalkFunc(`${arg}`)
+    }
+
+    return arg
   })
 
+  // Prepend the current time to the arguments
   args.unshift(
     chalk.yellow.bold(
       `[${new Date().toLocaleTimeString('en-US', {
@@ -35,10 +54,11 @@ const log = (
         minute: 'numeric',
         second: 'numeric',
         fractionalSecondDigits: 3,
-        hour12: true
-      })}]`
+      })}]:`
     )
   )
+
+  // Log the arguments using the appropriate console function based on the log level
 
   // consoleLog(args)
 
